@@ -1,0 +1,16 @@
+FILTERS:
+  Location: Amsterdam
+  Max_price: 500000
+PLUGINS:
+  check_marcel_kon: true
+  hoitink: true
+  marcel-kon: true
+  marcel_kon: true
+  schakel: true
+  teamsanders: true
+  weusthuis: true
+TELEGRAM:
+  API_KEY: BOTTOKEN_HERE
+  LIST_OF_ADMINS:
+  - USERID_HERE
+  USERID: USERID_HERE
