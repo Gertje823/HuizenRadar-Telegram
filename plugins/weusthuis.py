@@ -88,13 +88,12 @@ def check_weusthuis(context):
         img = img.replace('url(', '').replace(')', '')
         print(img)
         # compare with DB
-        print(item.get_text().strip())
         params = (price, address, status, url)
         try:
             c.execute("INSERT INTO weusthuis(RAW, Price, Address, Status, URL)VALUES (?,?,?,?,?)", (item.get_text().strip(), price, address, status, url))
             conn.commit()
 
-            caption = f"[{address}]({url})\n{price}"
+            caption = f"Weusthuis Makelaardij\n[{address}]({url})\n{price}"
             try:
                 context.bot.send_photo(chat_id=config['TELEGRAM']['USERID'], caption=caption, photo=img, parse_mode="markdown")
             except:

@@ -20,13 +20,13 @@ def start_bot():
     dispatcher = updater.dispatcher
 
     # Command Handlers
-    # dispatcher.add_handler(CommandHandler('bbq', bbq.bbq))
 
-    updater.job_queue.run_repeating(schakel.check_schakel, interval=3600, first=0)
-    updater.job_queue.run_repeating(teamsanders.teamsanders, interval=3600, first=0)
-    updater.job_queue.run_repeating(weusthuis.check_weusthuis, interval=3600, first=0)
+    updater.job_queue.run_repeating(funda.check_funda, interval=3600, first=1)
+    updater.job_queue.run_repeating(schakel.check_schakel, interval=3600, first=1)
+    #updater.job_queue.run_repeating(teamsanders.teamsanders, interval=3600, first=0)
+    updater.job_queue.run_repeating(weusthuis.check_weusthuis, interval=3600, first=1)
     updater.job_queue.run_repeating(marcel_kon.check_marcel_kon, interval=3600, first=1)
-    updater.job_queue.run_repeating(hoitink.check_hoitink, interval=3600, first=0)
+    updater.job_queue.run_repeating(hoitink.check_hoitink, interval=3600, first=1)
 
     updater.start_polling(drop_pending_updates=True)
     updater.idle()

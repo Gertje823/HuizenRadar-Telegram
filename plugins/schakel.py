@@ -3,12 +3,15 @@
 
 """
 from plugins import new_message, enable_check
-import requests, sqlite3, re
+import requests, sqlite3, re, yaml
 from bs4 import BeautifulSoup
 
 def check_schakel(context):
     if enable_check.enable_check(__name__):
         return
+    # load filters
+    with open('config.yaml', 'r') as f:
+        config = yaml.full_load(f)
     cookies = {
         'display': 'list',
         'cookielawinfo-checkbox-necessary': 'yes',
@@ -42,13 +45,13 @@ def check_schakel(context):
     data = {
         '__live': '1',
         '__infinite': 'item',
-        'plaats': 'almelo',
+        'plaats': f"{config['FILTERS']['Location']}",
         'adres': '',
         'koopofhuur': 'koop',
         'soortWoonhuis': '',
         'aantalSlaapkamers': '',
         'prijsMin': '',
-        'prijsMax': '250000',
+        'prijsMax': f"{config['FILTERS']['Max_price']}",
         'typeWoonhuis': '',
         'bouwvorm': '',
         'perceelOppervlakte': '',
@@ -96,7 +99,7 @@ def check_schakel(context):
             c.execute("INSERT INTO Schakel(RAW, Price, Address, Status, URL)VALUES (?,?,?,?,?)", params)
             conn.commit()
 
-            caption = f"[{address}]({url})\n{price}\nArea: {area} Living space: {Living_space}\nBedrooms: {Bed_rooms}"
+            caption = f"Schakel\n[{address}]({url})\n{price}\nArea: {area} Living space: {Living_space}\nBedrooms: {Bed_rooms}"
             try:
                 context.bot.send_photo(chat_id=19441944, caption=caption, photo=img, parse_mode="markdown")
             except:

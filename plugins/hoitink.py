@@ -106,7 +106,7 @@ def check_hoitink(context):
                         c.execute("INSERT INTO hoitink(RAW, Price, Address, Status, URL)VALUES (?,?,?,?,?)", (item.get_text().strip(), price, address, status, url))
                         conn.commit()
 
-                        caption = f"[{address}]({url})\n{price}"
+                        caption = f"Hoitink Makelaardij\n[{address}]({url})\n{price}"
                         try:
                             context.bot.send_photo(chat_id=config['TELEGRAM']['USERID'], caption=caption, photo=img, parse_mode="markdown")
                         except:

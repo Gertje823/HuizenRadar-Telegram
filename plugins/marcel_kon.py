@@ -76,7 +76,7 @@ def check_marcel_kon(context):
                       (item.get_text().strip(), price, address, status, url))
             conn.commit()
 
-            caption = f"[{address}]({url})\n{price}"
+            caption = f"Marcel Kon\n[{address}]({url})\n{price}"
             try:
                 context.bot.send_photo(chat_id=config['TELEGRAM']['USERID'], caption=caption, photo=img, parse_mode="markdown")
             except:

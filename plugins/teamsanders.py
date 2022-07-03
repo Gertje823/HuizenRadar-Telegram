@@ -18,7 +18,6 @@ def teamsanders(context):
         'authority': 'teamsanders.nl',
         'accept': '*/*',
         'accept-language': 'en-NL,en;q=0.9,nl-NL;q=0.8,nl;q=0.7,en-US;q=0.6,de;q=0.5,ru;q=0.4,it;q=0.3',
-        # 'cookie': 'gmb_r_state=4c9040a27c81f122ffb321a9b9f2c71c',
         'dnt': '1',
         'if-modified-since': 'Sun, 26 Jun 2022 11:01:11 GMT',
         'referer': 'https://teamsanders.nl/woningen/bestaandebouw',
