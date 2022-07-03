@@ -1,6 +1,6 @@
 # HuizenRadar-Telegram
 Telegram Bot based on [Maiebot](https://github.com/bastiaanbiester/maiebot) to notify when new houses are available.
-This script checks every x time if there are new houses listed on different real estate websites and will notify you.
+This script checks every x time if there are new houses listed on different websites and will notify you.
 It supports custom filters.
 
 ## How To Use
@@ -9,6 +9,7 @@ It supports custom filters.
 3. Run the bot
 
 ## Supported sites
+ - [Funda.nl](https://funda.nl)
  - [Hoitinkmakelaardij.nl](https://hoitinkmakelaardij.nl)
  - [Marcel-kon](https://marcel-kon.nl)
  - [Schakel](https://schakel.nl)
