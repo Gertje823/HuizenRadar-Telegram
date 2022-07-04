@@ -1,6 +1,5 @@
 """
 *Funda* - funda.nl
-
 """
 from plugins import new_message, enable_check
 import requests, sqlite3, re
