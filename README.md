@@ -19,6 +19,10 @@ It supports custom filters.
 ## Supported filters
  - Location
  - Max price
+ 
+ ## TODO
+  - Set/edit/show filters through telegram commands
+  
 
 ## Your favorite site not supported yet?
 Feel free to write a parser yourself and open a PR. Or open an issue and I will try to add it.
