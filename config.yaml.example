@@ -2,9 +2,8 @@ FILTERS:
   Location: Amsterdam
   Max_price: 500000
 PLUGINS:
-  check_marcel_kon: true
+  funda: true
   hoitink: true
-  marcel-kon: true
   marcel_kon: true
   schakel: true
   teamsanders: true
