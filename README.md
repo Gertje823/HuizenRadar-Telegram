@@ -16,5 +16,9 @@ It supports custom filters.
  - [Teamsanders](https://teamsanders.nl)
  - [Weusthuismakelaardij](https://weusthuismakelaardij.nl)
 
+## Supported filters
+ - Location
+ - Max price
+
 ## Your favorite site not supported yet?
 Feel free to write a parser yourself and open a PR. Or open an issue and I will try to add it.
